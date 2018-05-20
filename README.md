@@ -21,6 +21,11 @@ package path : com.tal.gupao.patterns.prototype
 unit test : com.tal.gupao.patterns.singleton.SingletonTest
 >Scenario: Fine-sounding message can clone to another girls. 
 
+## Proxy Patterns
 
+package path :  com.tal.gupao.patterns.proxy
+
+unit test :  com.tal.gupao.patterns.proxy.ProxyTest
+>Scenario: I want to watch a movie. I am using BaiduYun or Xunlei to download.
 
 
