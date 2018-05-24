@@ -28,4 +28,11 @@ package path :  com.tal.gupao.patterns.proxy
 unit test :  com.tal.gupao.patterns.proxy.ProxyTest
 >Scenario: I want to watch a movie. I am using BaiduYun or Xunlei to download.
 
+## Strategy Patterns
+package path : com.tal.gupao.patterns.strategy
+
+
+
+
+## Template Patterns
 
