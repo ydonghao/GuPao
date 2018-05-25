@@ -31,8 +31,13 @@ unit test :  com.tal.gupao.patterns.proxy.ProxyTest
 ## Strategy Patterns
 package path : com.tal.gupao.patterns.strategy
 
-
-
+unit test : com.tal.gupao.patterns.strategy.StrategyTest
+>Scenario: Download movie by two ways.
 
 ## Template Patterns
+package path : com.tal.gupao.patterns.template
+
+unit test : com.tal.gupao.patterns.template.TemplateTest
+>Scenario: The most simple template method.
+
 
