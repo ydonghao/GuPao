@@ -38,4 +38,11 @@
 ## Adapter Patterns
 * package path : com.tal.gupao.patterns.adapter
 * unit test : com.tal.gupao.patterns.adapter.AdapterTest
->Scenario: Make an adapter to covert data from Android to iOS. 
+>Scenario: Make an adapter to covert data from Android to iOS.
+
+## Decorator Patterns
+ * package path : com.tal.gupao.patterns.decorator
+ * unit test : com.tal.gupao.patterns.decorator.DecoratorTest
+ >Scenario: A pen only sell $1. But an art decorates it, it will become art pen. Art pen will sell $10.
+ 
+ ## 
