@@ -47,15 +47,29 @@
  
  # Mybatis 
  ## Chapter 1
-1. Mapper在spring管理下其实是单例，为什么可以是一个单例？ SCOPE -> application
->答：不知道老师这句话描述的意思，Mapper在spring中有SqlSessionTemplate和sqlSessionFactory获取两种方式，sqlSessionTemplate每次都返回不同的
-DefaultSqlSession,而SqlSessionFactory每次都返回不同线程的SqlSession。
- 
-2. MyBatis在Spring集成下没有mapper的xml文件会不会报错，为什么？
+ 1、 Mapper在spring管理下其实是单例，为什么可以是一个单例？ SCOPE -> application
+>答：Mapper在spring中有SqlSessionTemplate和sqlSessionFactory获取两种方式，sqlSessionTemplate每次都返回不同的
+DefaultSqlSession,而SqlSessionFactory每次都返回不同线程的SqlSession。而mapper是单例。
+
+ | SqlSession               | Scope                     |
+ | ------------------------ | ------------------------- |
+ | SqlSessionFactoryBuilder | method                    |
+ | SqlSessionFactory        | application               |
+ | SqlSession               | request/method （线程级） |
+ | Mapper                   | method                    |
+
+
+ 2、 MyBatis在Spring集成下没有mapper的xml文件会不会报错，为什么？
 >答：不会，除了mapper的xml，还有annotation形式的Mybatis。
- 3. TypeHandler手写
+
+ 3、 TypeHandler手写
 >答：com.tal.gupao.mybatis.dao.handler.BlogTitleTypeHandler
 使用：Namespace:com.tal.gupao.mybatis.mapper.BlogMapper
 resultMap id='BaseResultMap'
+## Chapter 2
+ 4、 多个interceptor到底谁先执行？顺序由谁决定的？
+>答：com\tal\gupao\mybatis\plugins 手写Plugin。执行结果：后来居上。<br/>
+![alt text](./etc/20180730204145.png "mybatis") <br/>
+Executor > ParameterHandler > StatementHandler > ResultSetHandler
 
-
+ 5、 

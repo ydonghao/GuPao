@@ -14,6 +14,11 @@
         <typeHandler handler="com.tal.gupao.mybatis.dao.handler.BlogTitleTypeHandler" />
     </typeHandlers>
 
+    <plugins>
+        <plugin interceptor="com.tal.gupao.mybatis.plugins.XxPlugin" />
+        <plugin interceptor="com.tal.gupao.mybatis.plugins.YyPlugin" />
+    </plugins>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
