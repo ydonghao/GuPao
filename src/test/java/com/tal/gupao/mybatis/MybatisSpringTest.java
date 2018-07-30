@@ -26,6 +26,7 @@ public class MybatisSpringTest {
         Assert.assertEquals("admin", user.getName());
     }
 
+
     @Test
     public void test() throws SQLException {
         try {

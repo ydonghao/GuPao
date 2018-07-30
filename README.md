@@ -72,4 +72,9 @@ resultMap id='BaseResultMap'
 ![alt text](./etc/20180730204145.png "mybatis") <br/>
 Executor > ParameterHandler > StatementHandler > ResultSetHandler
 
- 5、 
+## Chapter 3
+ 5、 怎么验证一级缓存的存在？
+>答：com.tal.gupao.mybatis.dao.PostRepository.验证一级缓存是否存在
+
+ 6、 验证N+1问题
+ 
