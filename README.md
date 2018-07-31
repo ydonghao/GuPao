@@ -48,15 +48,7 @@
  # Mybatis 
  ## Chapter 1
  1、 Mapper在spring管理下其实是单例，为什么可以是一个单例？ SCOPE -> application
->答：Mapper在spring中有SqlSessionTemplate和sqlSessionFactory获取两种方式，sqlSessionTemplate每次都返回不同的
-DefaultSqlSession,而SqlSessionFactory每次都返回不同线程的SqlSession。而mapper是单例。
-
- | SqlSession               | Scope                     |
- | ------------------------ | ------------------------- |
- | SqlSessionFactoryBuilder | method                    |
- | SqlSessionFactory        | application               |
- | SqlSession               | request/method （线程级） |
- | Mapper                   | method                    |
+>答：Mapper的作用是定位，全局单例没问题。
 
 
  2、 MyBatis在Spring集成下没有mapper的xml文件会不会报错，为什么？
